@@ -17,17 +17,15 @@ public struct CountryCodesSwift {
     public let countryCodes: [CountryCode]
     public let countryCodesByDialCode: [String: [CountryCode]]
 
-    private init(countryCodes: [CountryCode]) {
-        self.countryCodes = countryCodes
-        self.countryCodesByDialCode = countryCodes.countryCodesByDialCode
-    }
-
-    public static func instantiate() throws -> CountryCodesSwift {
+    public init() {
         do {
-            let countryCodes = try loadCountryCodes().get()
-            return CountryCodesSwift(countryCodes: countryCodes)
+            let countryCodes = try CountryCodesSwift.loadCountryCodes().get()
+            self.countryCodes = countryCodes
+            self.countryCodesByDialCode = countryCodes.countryCodesByDialCode
         } catch {
-            throw error
+            print("Error loading country codes: \(error)")
+            self.countryCodes = []
+            self.countryCodesByDialCode = [:]
         }
     }
 
@@ -47,7 +45,7 @@ public struct CountryCodesSwift {
         }
     }
 
-    func recognizeCountry(from phoneNumber: String) -> [CountryCode]? {
+    public func recognizeCountries(with phoneNumber: String) -> [CountryCode]? {
         guard !phoneNumber.isEmpty else {
             return nil
         }

@@ -52,11 +52,11 @@ do {
 
 ### Recognizing Country from Phone Number
 
-You can use the `recognizeCountry(from:)` method to determine the country from a phone number's dial code:
+You can use the `recognizeCountries(with:)` method to determine the country from a phone number's dial code:
 
 ```swift
 let phoneNumber = "+134645756"
-if let countryCodes = instance?.recognizeCountry(from: phoneNumber) {
+if let countryCodes = instance?.recognizeCountries(with: phoneNumber) {
     // Handle the recognized country codes
 }
 ```
