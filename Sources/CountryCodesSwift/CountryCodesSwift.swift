@@ -22,7 +22,7 @@ public struct CountryCodesSwift {
         self.countryCodesByDialCode = countryCodes.countryCodesByDialCode
     }
 
-    static func instantiate() throws -> CountryCodesSwift {
+    public static func instantiate() throws -> CountryCodesSwift {
         do {
             let countryCodes = try loadCountryCodes().get()
             return CountryCodesSwift(countryCodes: countryCodes)
