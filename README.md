@@ -15,7 +15,7 @@ You can easily integrate the `CountryCodesSwift` library into your Swift project
 ### Swift Package Manager
 
 1. In Xcode, go to "File" -> "Swift Packages" -> "Add Package Dependency..."
-2. Enter the repository URL: `[URL_TO_YOUR_GITHUB_REPOSITORY]`.
+2. Enter the repository URL: `https://github.com/Samback/CountryCodesSwift.git`.
 3. Select the library and add it to your target.
 
 ## Usage
