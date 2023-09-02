@@ -8,11 +8,11 @@
 import Foundation
 
 public struct CountryCode: Codable {
-    let name: String
-    let code: String
-    let dialCode: String
-    let emoji: String
-
+    public let name: String
+    public let code: String
+    public let dialCode: String
+    public let emoji: String
+    
     enum CodingKeys: String, CodingKey {
         case name
         case code
