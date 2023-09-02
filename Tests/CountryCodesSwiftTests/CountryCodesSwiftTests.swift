@@ -3,6 +3,21 @@ import XCTest
 
 
 final class CountryCodesSwiftTests: XCTestCase {
+
+    func testFileAvailability() {
+        if let url = Bundle.module.url(forResource: "countryCodes", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                XCTAssertNotNil(data)
+
+            } catch {
+                XCTAssertNil(error)
+            }
+        } else {
+            XCTFail("File not found")
+        }
+    }
+
     func testCountryCodesLoading() throws {
         let instance = CountryCodesSwift()
         XCTAssertEqual(instance.countryCodes.count, 242)

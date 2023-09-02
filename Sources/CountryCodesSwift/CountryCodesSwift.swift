@@ -30,7 +30,7 @@ public struct CountryCodesSwift {
 
     static func loadCountryCodes() -> Result<[CountryCode], Error> {
         return Result {
-            if let url = Bundle.module.url(forResource: "countryCodes", withExtension: "json", subdirectory:"Resources") {
+            if let url = Bundle.module.url(forResource: "countryCodes", withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
                     let countryCodes = try JSONDecoder().decode([CountryCode].self, from: data)

@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "CountryCodesSwift",
             dependencies: [],
-            resources: [.copy("Resources")]
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "CountryCodesSwiftTests",
