@@ -33,9 +33,7 @@ You can easily determine the countries associated with phone number dial codes u
 
 ```swift
 let phoneNumber = "+134645756"
-if let recognizedCountries = countryCodesInstance.recognizeCountries(with: phoneNumber) {
-    // Handle the recognized countries
-}
+let recognizedCountries = countryCodesInstance.recognizeCountries(with: phoneNumber)
 ```
 
 ### Grouping Country Codes
