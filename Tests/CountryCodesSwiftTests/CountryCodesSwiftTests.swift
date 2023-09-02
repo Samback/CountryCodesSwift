@@ -39,6 +39,14 @@ final class CountryCodesSwiftTests: XCTestCase {
         XCTAssertEqual(countryCodes?.last?.name, "United States")
     }
 
+    func testCheckUSACountryCodeAndCanadaWithoutPlus() {
+        let instance = CountryCodesSwift()
+        let countryCodes = instance.recognizeCountries(with: "134645756")
+        XCTAssertEqual(countryCodes?.count, 2)
+        XCTAssertEqual(countryCodes?.first?.name, "Canada")
+        XCTAssertEqual(countryCodes?.last?.name, "United States")
+    }
+
 
     func testCheckUkraine() {
         let instance = CountryCodesSwift()

@@ -50,7 +50,7 @@ public struct CountryCodesSwift {
         }
 
         for i in (2...4).reversed() {
-            let prefix = String(phoneNumber.prefix(i))
+            let prefix = String(phoneNumber.fullPhoneNumber.prefix(i))
             if let countryCode = countryCodesByDialCode[prefix] {
                 return countryCode
             }

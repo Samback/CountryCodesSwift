@@ -9,6 +9,7 @@ import Foundation
 
 extension String {
     var fullPhoneNumber: String {
-         self.contains("+") ? self : "+" + self
+        "+" + self
+            .filter { $0.isNumber }
     }
 }
