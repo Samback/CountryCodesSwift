@@ -44,9 +44,9 @@ public struct CountryCodesSwift {
         }
     }
 
-    public func recognizeCountries(with phoneNumber: String) -> [CountryCode]? {
+    public func recognizeCountries(with phoneNumber: String) -> [CountryCode] {
         guard !phoneNumber.isEmpty else {
-            return nil
+            return []
         }
 
         for i in (2...4).reversed() {
@@ -56,7 +56,7 @@ public struct CountryCodesSwift {
             }
         }
 
-        return nil
+        return []
     }
 
 }
