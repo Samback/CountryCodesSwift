@@ -11,7 +11,6 @@ extension Sequence where Element == CountryCode {
     }
 }
 
-@available(macOS 13.0, *)
 public struct CountryCodesSwift {
 
     public let countryCodes: [CountryCode]

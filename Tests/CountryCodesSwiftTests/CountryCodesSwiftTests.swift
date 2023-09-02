@@ -2,7 +2,6 @@ import XCTest
 @testable import CountryCodesSwift
 
 
-@available(macOS 13.0, *)
 final class CountryCodesSwiftTests: XCTestCase {
     func testCountryCodesLoading() throws {
         let instance = CountryCodesSwift()
